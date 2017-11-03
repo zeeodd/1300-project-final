@@ -1,0 +1,85 @@
+body {
+  margin: 0 auto;
+  padding: 100px;
+  font-family: "Times", sans-serif;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+/*
+
+Color Scheme
+
+Spooky Blue: #6D7696
+Midnight Hue: #59484F
+Black Clay: #455C4F
+Apple Red: #CC5543
+Darker Apple Red: #B44331
+Light Orange: #EDB579
+Green Apple: #DBE6AF
+
+*/
+
+#all-content-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#calendar {
+  order: 1;
+}
+
+#form {
+  margin: 0 auto;
+  width: 300px;
+  padding: 1px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  order: 2;
+}
+
+#form-header {
+  text-align: center;
+}
+
+.form-label {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#form-label-unique {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#notes {
+  align-self: center;
+  height: 55px;
+  width: 175px;
+}
+
+.submit-button {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#name {
+  width: 175px;
+}
+
+#email {
+  width: 175px;
+}
+
+#event-date {
+  width: 175px;
+}
+
+#time-range-id {
+  width: 140px;
+}
