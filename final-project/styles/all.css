@@ -44,10 +44,12 @@ Green Apple: #DBE6AF
 #form {
   margin: 0 auto;
   width: 300px;
+  height: 395px;
   padding: 1px;
   border: 2px solid #000000;
   border-radius: 10px;
   order: 2;
+  z-index: 1;
 }
 
 #switch-button-div {
@@ -72,6 +74,27 @@ Green Apple: #DBE6AF
 }
 
 .form-label {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#date-label {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#range-label {
+  display: inline-block;
+  width: 90px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+#email-label {
   display: inline-block;
   width: 90px;
   text-align: center;
