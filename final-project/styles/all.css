@@ -1,3 +1,35 @@
+/*Nav Bar Styling*/
+ul {
+  /* Nav bar inspired by: https://www.w3schools.com/css/css_navbar.asp */
+  text-align: center;
+  padding: 10px 10px;
+  margin: 0 auto;
+  width: 98.75%;
+  background-color: white;
+  position: fixed;
+  overflow: hidden;
+  top: 50px;
+  width:1000px;
+
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+}
+
+li a {
+    font-weight: normal;
+    padding: 16px 18px;
+    text-decoration: none;
+    color:inherit;
+    text-decoration: underline;
+}
+
+li a:hover {
+  background-color: pink;
+}
+
 body {
   margin: 0 auto;
   padding: 100px;

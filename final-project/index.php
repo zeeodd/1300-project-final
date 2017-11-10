@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <!-- <?php include("includes/navigation.php"); ?> -->
+  <?php include("includes/navigation.php"); ?>
 
   <h1 class="title">
     Home
