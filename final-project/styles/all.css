@@ -38,6 +38,19 @@ body {
   padding-top: 20px;
 }
 
+#navTitle{
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 0 auto;
+  width: 1000px;
+  font-family:Didot;
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+
 #cover-photo {
   width: 80%;
   display: block;
@@ -125,4 +138,14 @@ Green Apple: #DBE6AF
 
 #time-range-id {
   width: 140px;
+}
+
+/*Styling for Music Page*/
+body {
+  margin-top: 100px;
+}
+
+iframe {
+  margin-bottom: 25px;
+  margin-left: 225px;
 }
