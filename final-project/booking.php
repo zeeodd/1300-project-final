@@ -5,9 +5,12 @@
   <title>Booking</title>
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/form-scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
+  <?php include("includes/navigation.php"); ?>
 
   <h1 id="title">
     Booking
@@ -20,10 +23,8 @@
     </div>
 
     <form id="form" action="/formpage.php" method="post">
-
-      <h3 id="form-header">
-      Book Us!
-      </h3>
+      
+      <h3 id="form-header">Book Us!</h3>
 
       <div id="name-box">
         <label class="form-label">Name:</label>
@@ -31,17 +32,17 @@
       </div>
 
       <div>
-        <label class="form-label">E-mail:</label>
+        <label id="email-label">E-mail:</label>
         <input class="form-active" type="email" id="email" name="user-email" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
       </div>
 
       <div>
-        <label class="form-label">Date:</label>
+        <label id="date-label">Date:</label>
         <input class="form-active" type="date" id="event-date" name="event-date" required>
       </div>
 
       <div>
-        <label class="form-label">Approx. Duration:</label>
+        <label id="range-label">Duration (hrs):</label>
         <input class="form-active" type="range" id="time-range-id" name="time-range" list="tickmarks" min="1" max="5" value="1" oninput="document.getElementById('output-id').innerHTML = this.value;">
         <datalist id="tickmarks">
           <option value="1">
@@ -50,7 +51,7 @@
           <option value="4">
           <option value="5">
         </datalist>
-        <output name="output" id="output-id">1</output>hrs
+        <output name="output" id="output-id">1</output>
       </div>
 
       <div id="event-desc">
@@ -63,6 +64,10 @@
       </div>
 
     </form>
+
+    <div id="switch-button-div">
+      <button id="switch-button">Switch Forms</button>
+    </div>
 
   </div>
 
