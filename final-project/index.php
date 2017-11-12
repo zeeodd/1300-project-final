@@ -71,7 +71,6 @@
   </p>
 
 </body>
-
 <footer>
   <div class="fb-like" data-href="https://www.facebook.com/OriginalSyncopators/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
   <!-- Source: https://developers.facebook.com/docs/plugins/like-button -->
