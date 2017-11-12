@@ -179,6 +179,20 @@ Green Apple: #DBE6AF
   width: 140px;
 }
 
+.profile {
+  width: 200px;
+  height: 300px;
+}
+
+.instrument{
+  width: 200px;
+  height: 150px;
+}
+
+#noah {
+  width: 200px;
+  height: 250px;
+  
 /*Styling for Music Page*/
 body {
   margin-top: 100px;
