@@ -32,17 +32,17 @@
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
-      <img src="images/cover-photo2.jpg" alt="Picture 2">
+      <img class="home-pics" src="images/cover-photo2.jpg" alt="Picture 2">
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 4</div>
-      <img src="images/cover-photo3.jpg" alt="Picture 3">
+      <img class="home-pics" src="images/cover-photo3.jpg" alt="Picture 3">
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">4 / 4</div>
-      <img src="images/cover-photo4.jpg" alt="Picture 4">
+      <img class="home-pics" src="images/cover-photo4.jpg" alt="Picture 4">
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
