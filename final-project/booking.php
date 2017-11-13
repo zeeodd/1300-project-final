@@ -10,11 +10,9 @@
 </head>
 
 <body>
+  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
-
-  <h1 id="title">
-    Booking
-  </h1>
+  <h1>Booking</h1>
 
   <div id="all-content-box">
 
@@ -23,7 +21,7 @@
     </div>
 
     <form id="form" action="/formpage.php" method="post">
-      
+
       <h3 id="form-header">Book Us!</h3>
 
       <div id="name-box">

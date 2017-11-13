@@ -8,12 +8,13 @@
 </head>
 
 <body>
+  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
   <h1>About Us</h1>
 
   <section>
     <h2>Noah Li</h2>
-    <img src="images/Noah_li.03.02 PM.png" alt="Noah Li playing" class="profile" id="noah">
+    <img src="images/noah-li.png" alt="Noah Li playing" class="profile" id="noah">
     <p>Noah Li is a 3rd year information science major at Cornell University. He plays the drums good.</p>
     <img src="images/c-drums.jpeg" alt="Noah's instrument" class="instrument" id="c-drums">
     <!--Source: http://www.clker.com/clipart-4464.html-->
