@@ -1,4 +1,19 @@
-/*Nav Bar Styling*/
+
+/* ---------- Nav Bar Styling ---------- */
+
+#navTitle{
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 10px 10px;
+  margin: 0 auto;
+  width: 1000px;
+  font-family: Didot;
+  background-color: white;
+  position: fixed;
+  top: 0;
+}
+
 ul {
   /* Nav bar inspired by: https://www.w3schools.com/css/css_navbar.asp */
   text-align: center;
@@ -30,50 +45,56 @@ li a:hover {
   background-color: pink;
 }
 
+/* ---------- Body Styling ----------*/
+
 body {
   margin: 0 auto;
   padding: 100px;
   font-family: "Times", sans-serif;
   padding-bottom: 20px;
-  padding-top: 20px;
+  padding-top: 80px;
 }
 
-#navTitle{
-  text-decoration: none;
-  color: inherit;
-  text-align: center;
-  padding: 10px 10px;
-  margin: 0 auto;
-  width: 1000px;
-  font-family:Didot;
-  background-color: white;
-  position: fixed;
-  top: 0;
+/* ---------- Home Page Styling ----------*/
+
+.home-pics {
+  width: 100%;
 }
 
-#cover-photo {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 #band-desc {
   text-align: center;
 }
 
-/*
+/* ---------- Music Page Styling ----------*/
 
-Color Scheme
+#bandcamp {
+  border: 0;
+  width: 100%;
+  height: 120px;
+}
 
-Spooky Blue: #6D7696
-Midnight Hue: #59484F
-Black Clay: #455C4F
-Apple Red: #CC5543
-Darker Apple Red: #B44331
-Light Orange: #EDB579
-Green Apple: #DBE6AF
+.iframe {
+  border: 0;
+}
 
-*/
+/* ---------- About Page Styling ----------*/
+
+.profile {
+  width: 200px;
+  height: 300px;
+}
+
+.instrument{
+  width: 200px;
+  height: 150px;
+}
+
+#noah {
+  width: 200px;
+  height: 250px;
+}
+
+/* ---------- Booking Page Styling ----------*/
 
 #all-content-box {
   display: flex;
@@ -179,28 +200,6 @@ Green Apple: #DBE6AF
   width: 140px;
 }
 
-.profile {
-  width: 200px;
-  height: 300px;
-}
-
-.instrument{
-  width: 200px;
-  height: 150px;
-}
-
-#noah {
-  width: 200px;
-  height: 250px;
-  
-/*Styling for Music Page*/
-body {
-  margin-top: 100px;
-}
-
-iframe {
-  margin-bottom: 25px;
-  margin-left: 225px;
 #switch-forms-button {
   text-align: center;
 }
