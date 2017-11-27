@@ -57,12 +57,9 @@ body {
 
 /* ---------- Home Page Styling ----------*/
 
-.home-pics {
-  width: 100%;
-}
-
 #band-desc {
   text-align: center;
+  padding-top: 30px;
 }
 
 /* ---------- Music Page Styling ----------*/
