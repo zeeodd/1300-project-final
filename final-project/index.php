@@ -24,39 +24,20 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   <!-- Source: https://developers.facebook.com/docs/plugins/like-button -->
 
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 4</div>
-      <img class="home-pics" src="images/cover-photo1.jpg" alt="Picture 1">
+  <div id="slide">
+
+    <div id="image_container">
+      <img id="current_img" src="images/cover-photo1.jpg">
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 4</div>
-      <img class="home-pics" src="images/cover-photo2.jpg" alt="Picture 2">
+    <div id="button_container">
+      <button class="slide_button" id="left">&#10094;</button>
+      <button class="slide_button" id="right">&#10095;</button>
     </div>
 
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 4</div>
-      <img class="home-pics" src="images/cover-photo3.jpg" alt="Picture 3">
-    </div>
-
-    <div class="mySlides fade">
-      <div class="numbertext">4 / 4</div>
-      <img class="home-pics" src="images/cover-photo4.jpg" alt="Picture 4">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </div>
-  <br>
 
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-  </div>
-<!-- Source: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+  <br/>
 
   <p id= "band-desc">
     We are the Cornell Original Syncopators, an ensemble based at Cornell University specializing in Hot and Classic Jazz from the 1910s-1930s.

@@ -1,36 +1,27 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+$(document).ready(function() {
+	var images = ["images/cover-photo1.jpg", "images/cover-photo2.jpg", "images/cover-photo3.jpg", "images/cover-photo4.jpg"];
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+	var currentImageIndex = 0;
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+	var FIRST_IMAGE_INDEX = 0;
+	var LAST_IMAGE_INDEX = images.length - 1;
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+	$("#left").click(function() {
+		if (currentImageIndex > FIRST_IMAGE_INDEX) {
+			currentImageIndex = currentImageIndex - 1;
+		} else {
+			currentImageIndex = LAST_IMAGE_INDEX;
+		}
+		$("#current_img").attr("src", images[currentImageIndex]);
+	});
 
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-// Source: https://www.w3schools.com/howto/howto_js_slideshow.asp
+	$("#right").click(function() {
+		if (currentImageIndex < LAST_IMAGE_INDEX) {
+			// move to next image
+			currentImageIndex = currentImageIndex + 1;
+		} else {
+			currentImageIndex = FIRST_IMAGE_INDEX;
+		}
+		$("#current_img").attr("src", images[currentImageIndex]);
+	});
+});
