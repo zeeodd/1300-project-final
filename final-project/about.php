@@ -32,7 +32,7 @@
 
   </section>
 
-  <section>
+  <section class='blurb'>
     <h2>Noah Li</h2>
     <div class="about">
       <img src="images/noah-li.png" alt="Noah Li playing" class="profile" id="noah">
@@ -42,7 +42,7 @@
     </div>
   </section>
 
-  <section>
+  <section class='blurb'>
     <h2>Rishi Verma</h2>
     <div class="about">
       <img src="images/trombone.jpg" alt="Rishi Verma playing" class="profile" id="rishi">
@@ -52,7 +52,7 @@
     </div>
   </section>
 
-  <section>
+  <section class='blurb'>
     <h2>Amit Mazrahi</h2>
     <div class="about">
       <img src="images/piano.jpg" alt="Amit Mizrahi playing" class="profile" id="amit">
@@ -62,7 +62,7 @@
     </div>
   </section>
 
-  <section>
+  <section class='blurb'>
     <h2>Nikki Love</h2>
     <div class="about">
       <img src="images/violin.jpg" alt="Nikki Love playing" class="profile" id="nikki">

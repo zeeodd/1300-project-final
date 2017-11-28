@@ -3,13 +3,13 @@
 
 #navTitle{
   text-decoration: none;
-  color: inherit;
+  color: #5C472A;
   text-align: center;
   padding: 10px 10px;
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   font-family: Didot;
-  background-color: white;
+  background-color: #EDE6D8;
   position: fixed;
   top: 0;
 }
@@ -20,11 +20,11 @@ ul {
   padding: 10px 10px;
   margin: 0 auto;
   /*width: 98.75%;*/
-  background-color: white;
+  background-color: #EDE6D8;
   position: fixed;
   overflow: hidden;
   top: 50px;
-  width:100%;
+  width: 80%;
 
 }
 
@@ -37,7 +37,7 @@ li a {
     font-weight: normal;
     padding: 16px 18px;
     text-decoration: none;
-    color:inherit;
+    color: #5C472A;
     text-decoration: underline;
 }
 
@@ -53,6 +53,7 @@ body {
   font-family: "Times", sans-serif;
   padding-bottom: 20px;
   padding-top: 80px;
+  background-color: #EDE6D8;
 }
 
 /* ---------- Home Page Styling ----------*/
@@ -143,6 +144,10 @@ body {
   height: 250px;
 }
 
+.blurb {
+  position: relative;
+}
+
 /* ---------- Booking Page Styling ----------*/
 
 #all-content-box {
@@ -153,6 +158,8 @@ body {
 
 #calendar {
   order: 1;
+  background-color: #EDE6D8;
+  border-width: 0;
 }
 
 #form {
@@ -161,6 +168,8 @@ body {
   height: auto;
   padding: 1px;
   border: 2px solid #000000;
+  background-color: #D4C3A7;
+  color: #5C472A;
   border-radius: 10px;
   order: 2;
 }
@@ -172,7 +181,7 @@ body {
 }
 
 #switch-button {
-  background-color: white;
+  background-color: #D4C3A7;
   border: 2px solid #000000;
   border-radius: 10px;
   outline: none;
