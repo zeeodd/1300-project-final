@@ -13,24 +13,50 @@
   <?php include("includes/navigation.php"); ?>
   <h1>Our Releases</h1>
 
-  <iframe width="700" height="120" class="iframe"
-  src="https://bandcamp.com/EmbeddedPlayer/track=1332528160/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/">
-  </iframe>
+  <div id="releases">
+    <div id="album_play">
+      <iframe id="spotify" src="https://open.spotify.com/embed/album/1vHJ7SnXsBAkbIwj7crJUg" width="300"
+      height="380" frameborder="0" allowtransparency="true"></iframe>
+    </div>
 
-  <h1>Our Videos</h1>
+    <div id="album">
+      <img src="images/album_cover.jpg" alt="album_cover" id="albumcover">
+    </div>
 
-  <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3BdBbSmKftY"
-  allowfullscreen></iframe>
+    <div id="album_des">
+      <p> Check out our album "Wild Jazz", which was released on November 26th, 2017.
+        "Wild Jazz" is out on Spotify, Bandcamp and will soon be on Itunes as well.
+        Thanks to Electric Buffalo Records for the fantastic production! </p>
+    </div>
+  </div>
 
-  <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/aPPEhsDzKWI"
-  allowfullscreen></iframe>
+  <div id="our_vids">
+    <h1>Our Videos</h1>
+    <p> from oldest to new </p>
+    <div>
+      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3BdBbSmKftY"
+      allowfullscreen></iframe>
+      <p> Upload date: December 6th, 2016 </p>
+    </div>
 
-  <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3XxF_sYYORM"
-  allowfullscreen></iframe>
+    <div>
+      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/aPPEhsDzKWI"
+      allowfullscreen></iframe>
+      <p> Upload date: March 3rd, 2017 </p>
+    </div>
 
-  <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/luleNxfOB3c"
-  allowfullscreen></iframe>
+    <div>
+      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3XxF_sYYORM"
+      allowfullscreen></iframe>
+      <p> Upload date: March 3rd, 2017 </p>
+    </div>
 
+    <div>
+      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/luleNxfOB3c"
+      allowfullscreen></iframe>
+      <p> Upload date: March 3rd, 2017 </p>
+    </div>
+  </div>
 </body>
 
 </html>
