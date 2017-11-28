@@ -1,3 +1,12 @@
+<?php
+session_start();
+$name = $_SESSION['name'];
+$email = $_SESSION['email'];
+$date = $_SESSION['date'];
+$timeBefore = $_SESSION['time-before'];
+$timeAfter = $_SESSION['time-after'];
+$note = $_SESSION['note'];
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +17,19 @@
 </head>
 
 <body>
-  Form page still under construction! <br/>
+  <h2>
+    Form page still under construction!
+  </h2>
+
+  <div>
+    <?php echo( htmlspecialchars($name) ); ?> <br/>
+    <?php echo( htmlspecialchars($email) ); ?> <br/>
+    <?php echo( htmlspecialchars($date) ); ?> <br/>
+    <?php echo( htmlspecialchars($timeBefore) ); ?> <br/>
+    <?php echo( htmlspecialchars($timeAfter) ); ?> <br/>
+    <?php echo( htmlspecialchars($note) ); ?> <br/>
+  </div>
+
   <div>
     <a href="index.php">Return Home</a>
   </div>
