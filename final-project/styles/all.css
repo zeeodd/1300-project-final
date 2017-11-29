@@ -7,7 +7,7 @@
   text-align: center;
   padding: 10px 10px;
   margin: 0 auto;
-  width: 80%;
+  width: 87%;
   font-family: Didot;
   background-color: #EDE6D8;
   position: fixed;
@@ -24,8 +24,7 @@ ul {
   position: fixed;
   overflow: hidden;
   top: 50px;
-  width: 80%;
-
+  width: 87%;
 }
 
 li {
@@ -89,6 +88,11 @@ body {
   font-size: 15px;
   text-align: center;
   padding-right: 100px;
+}
+
+#our_vids {
+  column-count: 2;
+  max-width: 100%;
 }
 /* ---------- About Page Styling ----------*/
 

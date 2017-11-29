@@ -30,29 +30,30 @@
     </div>
   </div>
 
+  <h1>Our Videos</h1>
+  <p> from oldest to new </p>
   <div id="our_vids">
-    <h1>Our Videos</h1>
-    <p> from oldest to new </p>
+
     <div>
-      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3BdBbSmKftY"
+      <iframe width="550" height="315" class="iframe" src="https://www.youtube.com/embed/3BdBbSmKftY"
       allowfullscreen></iframe>
       <p> Upload date: December 6th, 2016 </p>
     </div>
 
     <div>
-      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/aPPEhsDzKWI"
+      <iframe width="550" height="315" class="iframe" src="https://www.youtube.com/embed/aPPEhsDzKWI"
       allowfullscreen></iframe>
       <p> Upload date: March 3rd, 2017 </p>
     </div>
 
     <div>
-      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/3XxF_sYYORM"
+      <iframe width="550" height="315" class="iframe" src="https://www.youtube.com/embed/3XxF_sYYORM"
       allowfullscreen></iframe>
       <p> Upload date: March 3rd, 2017 </p>
     </div>
 
     <div>
-      <iframe width="560" height="315" class="iframe" src="https://www.youtube.com/embed/luleNxfOB3c"
+      <iframe width="550" height="315" class="iframe" src="https://www.youtube.com/embed/luleNxfOB3c"
       allowfullscreen></iframe>
       <p> Upload date: March 3rd, 2017 </p>
     </div>
