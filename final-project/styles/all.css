@@ -7,11 +7,12 @@
   text-align: center;
   padding: 10px 10px;
   margin: 0 auto;
-  width: 80%;
+  width: 85%;
   font-family: Didot;
   background-color: #EDE6D8;
   position: fixed;
   top: 0;
+  z-index: 2;
 }
 
 ul {
@@ -19,12 +20,12 @@ ul {
   text-align: center;
   padding: 10px 10px;
   margin: 0 auto;
-  /*width: 98.75%;*/
   background-color: #EDE6D8;
   position: fixed;
   overflow: hidden;
   top: 50px;
-  width: 80%;
+  width: 85%;
+  z-index: 2;
 
 }
 
@@ -42,7 +43,7 @@ li a {
 }
 
 li a:hover {
-  background-color: pink;
+  background-color: #BBA788;
 }
 
 /* ---------- Body Styling ----------*/
@@ -257,6 +258,13 @@ body {
 
 #switch-forms-button {
   text-align: center;
+}
+
+#required-field {
+  font-size: 11px;
+  padding-left: 85px;
+  /*padding-bottom: 10px;
+  padding-top: 5px;*/
 }
 
 /* ---------- VALIDATION ---------- */
