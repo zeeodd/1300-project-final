@@ -27,7 +27,7 @@
   <div id="slide">
 
     <div id="image_container">
-      <img id="current_img" src="images/cover-photo1.jpg">
+      <img id="current_img" src="images/cover-photo1.jpg" alt='Current Image'>
     </div>
 
     <div id="button_container">

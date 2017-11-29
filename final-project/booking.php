@@ -114,7 +114,7 @@ if (isset($submit)) {
 
       <!-- NAME -->
       <div id="name-box">
-        <label class="form-label">Name:</label>
+        <label class="form-label">Name*:</label>
         <input type="text" id="name" name="user-name" value="<?php echo( htmlspecialchars($name) );?>" required pattern="[A-Za-z\s]{1,}$">
       </div>
       <div class="<?php if ($name_valid) { echo("error-hidden"); } ?>" id="name-error">
@@ -123,7 +123,7 @@ if (isset($submit)) {
 
       <!-- EMAIL -->
       <div>
-        <label id="email-label">E-mail:</label>
+        <label id="email-label">E-mail*:</label>
         <input type="email" id="email" name="user-email" value="<?php echo( htmlspecialchars($email) );?>" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
       </div>
       <div class="<?php if ($email_valid) { echo("error-hidden"); } ?>" id="email-error">
@@ -132,7 +132,7 @@ if (isset($submit)) {
 
       <!-- DATE -->
       <div id="date-div">
-        <label id="date-label">Date:</label>
+        <label id="date-label">Date*:</label>
         <input type="date" id="event-date" name="event-date" value="<?php echo( htmlspecialchars($date) );?>" required>
       </div>
       <div class="<?php if ($date_valid) { echo("error-hidden"); } ?>" id="date-error">
@@ -141,7 +141,7 @@ if (isset($submit)) {
 
       <!-- TIME -->
       <div id="time-div">
-        <label id="range-label">Time:</label>
+        <label id="range-label">Time*:</label>
         <input type="time" id="time-range-before" name="time-range-before" value="<?php echo( htmlspecialchars($timeBefore) );?>" required>
         to
         <input type="time" id="time-range-after" name="time-range-after" value="<?php echo( htmlspecialchars($timeAfter) );?>" required>
@@ -160,8 +160,14 @@ if (isset($submit)) {
         <button name="submit" type="submit">Submit</button>
       </div>
 
+      <!-- REQUIRED MESSAGE -->
+      <div id="required-field">
+        Note that * indicates a required field
+      </div>
+
     </form>
 
+    <!-- SUBMIT BUTTON -->
     <div id="switch-button-div">
       <button id="switch-button">Switch to "Contact Us" form</button>
     </div>
