@@ -26,7 +26,6 @@ ul {
   top: 50px;
   width: 85%;
   z-index: 2;
-
 }
 
 li {
@@ -90,6 +89,11 @@ body {
   font-size: 15px;
   text-align: center;
   padding-right: 100px;
+}
+
+#our_vids {
+  column-count: 2;
+  max-width: 100%;
 }
 /* ---------- About Page Styling ----------*/
 
