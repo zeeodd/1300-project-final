@@ -9,8 +9,8 @@ $(document).ready(function() {
   var namermr = 0;
 
   $('#switch-button').click(function() {
-
-    console.log(namermr)
+    var f = $("#state").val()
+    console.log(f)
 
     if( $('#form-header').text() == 'Book Us!' ) {
       // Switch to Contact Us! form
@@ -24,6 +24,7 @@ $(document).ready(function() {
       $('#notes').css('margin-top', '20px')
       $('#notes').attr('placeholder', 'What\'s on your mind?')
       $('#switch-button').text('Switch to "Book Us" form')
+      $("#state").val("1");
 
       // ERRORS
       // if (namermr == 2 | namermr == 3) {
@@ -64,6 +65,7 @@ $(document).ready(function() {
       $('#email-label').css('padding-bottom', '0px')
       $('#notes').attr('placeholder', 'Let us know more about the event!')
       $('#switch-button').text('Switch to "Contact Us" form')
+      $("#state").val("0");
 
       // ERRORS
       // if (namermr == 1 | namermr == 3) {

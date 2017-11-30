@@ -1,86 +1,133 @@
 <?php
 
-date_default_timezone_set("America/New_York");
+$state = $_REQUEST["state"];
 $submit = $_REQUEST["submit"];
-$name = $_REQUEST["user-name"];
-$email = $_REQUEST["user-email"];
-$date = $_REQUEST["event-date"];
-$timeBefore = $_REQUEST["time-range-before"];
-$timeAfter = $_REQUEST["time-range-after"];
-$note = $_REQUEST["user-notes"];
 
-$name_valid = true;
-$email_valid = true;
-$date_valid = true;
-$time_valid = true;
+if($state == 0) { // Book Us State
+  date_default_timezone_set("America/New_York");
+  $name = $_REQUEST["user-name"];
+  $email = $_REQUEST["user-email"];
+  $date = $_REQUEST["event-date"];
+  $timeBefore = $_REQUEST["time-range-before"];
+  $timeAfter = $_REQUEST["time-range-after"];
+  $note = $_REQUEST["user-notes"];
+
+  $name_valid = true;
+  $email_valid = true;
+  $date_valid = true;
+  $time_valid = true;
+}
+
+if($state == 1) { // Contact Us State
+  $name = $_REQUEST["user-name"];
+  $email = $_REQUEST["user-email"];
+  $note = $_REQUEST["user-notes"];
+
+  $name_valid = true;
+  $email_valid = true;
+}
 
 if (isset($submit)) {
-  // NAME VALIDATION
-  $name_nonempty = !empty($name);
-  $name_onlylets = preg_match("/^[a-zA-Z ]*$/",$name);
-  $name_valid = $name_nonempty && $name_onlylets;
 
-  // EMAIL VALIDATION
-  $email_nonempty = !empty($email);
-  $email_format = filter_var($email, FILTER_VALIDATE_EMAIL);
-  $email_valid = $email_nonempty && $email_format;
+  if($state == 0) { // Book Us State
+    // NAME VALIDATION
+    $name_nonempty = !empty($name);
+    $name_onlylets = preg_match("/^[a-zA-Z ]*$/",$name);
+    $name_valid = $name_nonempty && $name_onlylets;
 
-  // DATE VALIDATOIN
-  $date_nonempty = !empty($date);
+    // EMAIL VALIDATION
+    $email_nonempty = !empty($email);
+    $email_format = filter_var($email, FILTER_VALIDATE_EMAIL);
+    $email_valid = $email_nonempty && $email_format;
 
-  $current_date = date("Y-m-d");
-  list($user_year, $user_month, $user_day) = split('-', $date);
-  list($year, $month, $day) = split('-', $current_date);
+    // DATE VALIDATOIN
+    $date_nonempty = !empty($date);
 
-  $date_acd = true;
-  if ($user_year < $year) {
-    $date_acd = false;
-  }
+    $current_date = date("Y-m-d");
+    list($user_year, $user_month, $user_day) = split('-', $date);
+    list($year, $month, $day) = split('-', $current_date);
 
-  if ($user_year == $year) {
-    if ($user_month < $month) {
+    $date_acd = true;
+    if ($user_year < $year) {
       $date_acd = false;
     }
-  }
 
-  if ($user_year == $year) {
-    if ($user_month == $month) {
-      if ($user_day < $day) {
+    if ($user_year == $year) {
+      if ($user_month < $month) {
         $date_acd = false;
       }
     }
-  }
-  $date_valid = $date_nonempty && $date_acd;
 
-  // TIME VALIDATION
-  $timeBefore_nonempty = !empty($timeBefore);
-  $timeAfter_nonempty = !empty($timeAfter);
-  $time_valid = $timeBefore_nonempty && $timeAfter_nonempty;
+    if ($user_year == $year) {
+      if ($user_month == $month) {
+        if ($user_day < $day) {
+          $date_acd = false;
+        }
+      }
+    }
+    $date_valid = $date_nonempty && $date_acd;
 
-  if ($name_valid && $email_valid && $date_valid && $time_valid) {
-    session_start();
-    $_SESSION['name'] = $name;
-    $_SESSION['email'] = $email;
-    $_SESSION['date'] = $date;
-    $_SESSION['time-before'] = $timeBefore;
-    $_SESSION['time-after'] = $timeAfter;
-    $_SESSION['note'] = $note;
-    header("Location: formpage.php");
-    return;
-  } else {
-    if (!$name_valid) {
-      $name_valid = false;
-    }
-    if (!$email_valid) {
-      $email_valid = false;
-    }
-    if (!$date_valid) {
-      $date_valid = false;
-    }
-    if (!$time_valid) {
-      $time_valid = false;
+    // TIME VALIDATION
+    $timeBefore_nonempty = !empty($timeBefore);
+    $timeAfter_nonempty = !empty($timeAfter);
+    $time_valid = $timeBefore_nonempty && $timeAfter_nonempty;
+
+    if ($name_valid && $email_valid && $date_valid && $time_valid) {
+      session_start();
+      $_SESSION['name'] = $name;
+      $_SESSION['email'] = $email;
+      $_SESSION['date'] = $date;
+      $_SESSION['time-before'] = $timeBefore;
+      $_SESSION['time-after'] = $timeAfter;
+      $_SESSION['note'] = $note;
+      $_SESSION['state'] = $state;
+      header("Location: formpage.php");
+      return;
+    } else {
+      if (!$name_valid) {
+        $name_valid = false;
+      }
+      if (!$email_valid) {
+        $email_valid = false;
+      }
+      if (!$date_valid) {
+        $date_valid = false;
+      }
+      if (!$time_valid) {
+        $time_valid = false;
+      }
     }
   }
+
+  if ($state == 1) { // Contact Us State
+    // NAME VALIDATION
+    $name_nonempty = !empty($name);
+    $name_onlylets = preg_match("/^[a-zA-Z ]*$/",$name);
+    $name_valid = $name_nonempty && $name_onlylets;
+
+    // EMAIL VALIDATION
+    $email_nonempty = !empty($email);
+    $email_format = filter_var($email, FILTER_VALIDATE_EMAIL);
+    $email_valid = $email_nonempty && $email_format;
+
+    if ($name_valid && $email_valid) {
+      session_start();
+      $_SESSION['name'] = $name;
+      $_SESSION['email'] = $email;
+      $_SESSION['note'] = $note;
+      $_SESSION['state'] = $state;
+      header("Location: formpage.php");
+      return;
+    } else {
+      if (!$name_valid) {
+        $name_valid = false;
+      }
+      if (!$email_valid) {
+        $email_valid = false;
+      }
+    }
+  }
+
 }
 ?>
 
@@ -110,7 +157,8 @@ if (isset($submit)) {
     <!-- FORM CODE -->
     <form id="form" action="booking.php" method="post" novalidate>
 
-      <h3 id="form-header">Book Us!</h3>
+      <h2 id="form-header">Book Us!</h2>
+      <input type="text" id="state" name="state" value="0">
 
       <!-- NAME -->
       <div id="name-box">
