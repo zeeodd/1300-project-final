@@ -50,6 +50,7 @@ li a:hover {
 body {
   margin: 0 auto;
   padding: 100px;
+  color: #5C472A;
   font-family: "Times", sans-serif;
   padding-bottom: 20px;
   padding-top: 80px;
@@ -89,6 +90,7 @@ body {
   font-size: 15px;
   text-align: center;
   padding-right: 100px;
+  width: 400px;
 }
 
 #our_vids {
@@ -113,11 +115,13 @@ body {
   border: solid;
   border-color: #5C472A;
   font-size: 18px;
+  text-align: center;
 
 }
 .tile a {
   color: black;
   text-decoration: none;
+  vertical-align: middle;
 }
 
 .profile {
@@ -159,6 +163,15 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+#state {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
 }
 
 #calendar {
@@ -267,8 +280,40 @@ body {
 #required-field {
   font-size: 11px;
   padding-left: 85px;
-  /*padding-bottom: 10px;
-  padding-top: 5px;*/
+  padding-bottom: 10px;
+}
+
+#form-table, .th, .td {
+  border: 3px solid #5C472A;
+  border-collapse: collapse;
+}
+
+.th {
+  background-color: #9F8760;
+  color: #EDE6D8;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.td {
+  background-color: #D4C3A7;
+  color: #5C472A;
+  padding: 5px;
+  text-align: center;
+  font-size: 13px;
+}
+
+#form-table {
+  width: 80%;
+  margin: auto;
+}
+
+#formpage-header {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* ---------- VALIDATION ---------- */
