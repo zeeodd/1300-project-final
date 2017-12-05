@@ -1,18 +1,17 @@
 var TEST_PHP_FORM = true;
 
 $(document).ready(function() {
+  var f = $("#state").val()
+  console.log('initial state ' + f)
 
-  // 0 = no error
-  // 1 = error on Book Us
-  // 2 = error on Contact Us
-  // 3 = error on both
-  var namermr = 0;
+  // $("#form").on("submit", function() {
+  //   $("#state").val("1");
+  // });
 
   $('#switch-button').click(function() {
     var f = $("#state").val()
-    console.log(f)
 
-    if( $('#form-header').text() == 'Book Us!' ) {
+    if( $("#state").val() == 0 ) { // BOOK US FORM
       // Switch to Contact Us! form
       $('#form-header').text('Contact Us!')
       $('#date-label').hide()
@@ -20,18 +19,13 @@ $(document).ready(function() {
       $('#event-date').removeAttr('required')
       $('#date-div').hide()
       $('#time-div').hide()
-      $('#form-label-unique').text('Message:')
+      $('#form-label-unique').text('Message*:')
       $('#notes').css('margin-top', '20px')
       $('#notes').attr('placeholder', 'What\'s on your mind?')
-      $('#switch-button').text('Switch to "Book Us" form')
+      $('#switch-button').text('Book Us!')
       $("#state").val("1");
-
-      // ERRORS
-      // if (namermr == 2 | namermr == 3) {
-      //   $('#name-error').show()
-      // } else {
-      //   $('#name-error').hide()
-      // }
+      var f = $("#state").val()
+      console.log('state ' + f)
 
       name_error = $('#name-error').show()
       if (name_error) {
@@ -41,6 +35,11 @@ $(document).ready(function() {
       email_error = $('#email-error').show()
       if (email_error) {
         $('#email-error').hide()
+      }
+
+      note_error = $('#msg-error').show()
+      if (note_error) {
+        $('#msg-error').hide()
       }
 
       date_error = $('#date-error').show()
@@ -53,7 +52,7 @@ $(document).ready(function() {
         $('#time-error').hide()
       }
 
-    } else {
+    } else { // CONTACT US FORM
       // Switch back to Book Us! form
       $('#form-header').text('Book Us!')
       $('#date-label').show()
@@ -64,15 +63,10 @@ $(document).ready(function() {
       $('#form-label-unique').text('Event Details:')
       $('#email-label').css('padding-bottom', '0px')
       $('#notes').attr('placeholder', 'Let us know more about the event!')
-      $('#switch-button').text('Switch to "Contact Us" form')
+      $('#switch-button').text('Contact Us!')
       $("#state").val("0");
-
-      // ERRORS
-      // if (namermr == 1 | namermr == 3) {
-      //   $('#name-error').show()
-      // } else {
-      //   $('#name-error').hide()
-      // }
+      var f = $("#state").val()
+      console.log('state ' + f)
 
       name_error = $('#name-error').show()
       if (name_error) {
@@ -82,6 +76,11 @@ $(document).ready(function() {
       email_error = $('#email-error').show()
       if (email_error) {
         $('#email-error').hide()
+      }
+
+      note_error = $('#msg-error').show()
+      if (note_error) {
+        $('#msg-error').hide()
       }
 
       date_error = $('#date-error').show()
@@ -125,11 +124,6 @@ $(document).ready(function() {
          } else {
           $("#name-error").show();
           form_valid = false;
-          // if (namermr == 2) {
-          //   namermr = 3;
-          // } else {
-          //   namermr = 1;
-          // }
         }
 
         // EMAIL VALIDATION
@@ -190,19 +184,15 @@ $(document).ready(function() {
 
         var email_is_valid = $("#email").prop("validity").valid;
 
+        var note_is_valid = !$("#notes").prop("validity").valid;
+
         // NAME VALIDATION
         if (name_is_valid) {
           $("#name-error").hide();
          } else {
           $("#name-error").show();
           form_valid = false;
-          // if (namermr == 1) {
-          //   namermr = 3;
-          // } else {
-          //   namermr = 2;
-          // };
-        };
-      };
+        }
 
         // EMAIL VALIDATION
         if (email_is_valid) {
@@ -212,7 +202,16 @@ $(document).ready(function() {
           form_valid = false;
         }
 
+        // MSG VALIDATION
+        if (!note_is_valid) {
+          $("#msg-error").hide();
+         } else {
+          $("#msg-error").show();
+          form_valid = false;
+        }
+
         return form_valid;
-      });
-    };
+      };
+    });
+  };
   });

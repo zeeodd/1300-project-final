@@ -15,6 +15,25 @@
   z-index: 2;
 }
 
+#scale {
+  position: fixed;
+  z-index: 3;
+  opacity: 0.6;
+  height: auto;
+  width: 330px;
+  top: 14px;
+}
+
+#scale-end {
+  position: fixed;
+  z-index: 3;
+  opacity: 0.6;
+  height: auto;
+  width: 308px;
+  top: 20px;
+  left: 890px;
+}
+
 ul {
   /* Nav bar inspired by: https://www.w3schools.com/css/css_navbar.asp */
   text-align: center;
@@ -25,6 +44,7 @@ ul {
   overflow: hidden;
   top: 50px;
   width: 85%;
+  height: 25px;
   z-index: 2;
 }
 
@@ -55,6 +75,7 @@ body {
   padding-bottom: 20px;
   padding-top: 80px;
   background-color: #EDE6D8;
+  /*background-image: url("../images/recording-studio.png");*/
 }
 
 /* ---------- Home Page Styling ----------*/
@@ -185,7 +206,7 @@ body {
   width: 330px;
   height: auto;
   padding: 1px;
-  border: 2px solid #000000;
+  border: 2px solid #5C472A;
   background-color: #D4C3A7;
   color: #5C472A;
   border-radius: 10px;
@@ -200,17 +221,23 @@ body {
 
 #switch-button {
   background-color: #D4C3A7;
-  border: 2px solid #000000;
+  border: 2px solid #5C472A;
   border-radius: 10px;
   outline: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #5C472A;
+  font-family: 'Didot';
 }
 
 #switch-button:active {
-  background-color: grey;
+  background-color: #5C472A;
+  color: #D4C3A7;
 }
 
 #form-header {
   text-align: center;
+  margin-bottom: 0px;
 }
 
 .form-label {
@@ -253,6 +280,8 @@ body {
   height: 55px;
   width: 198px;
   resize: none;
+  background-color: #EDE6D8;
+  font-family: 'Didot';
 }
 
 .submit-button {
@@ -261,16 +290,49 @@ body {
   padding-bottom: 20px;
 }
 
+#submit {
+  font-family: 'Didot';
+  background-color: #EDE6D8;
+  border: 2px solid #5C472A;
+  color: #5C472A;
+  font-size: 13px;
+  padding-left: 6px;
+  padding-right: 6px;
+  outline: none;
+}
+
+#submit:active {
+  background-color: #5C472A;
+  border: 2px solid #EDE6D8;
+  color: #EDE6D8;
+}
+
 #name {
   width: 198px;
+  background-color: #EDE6D8;
+  font-family: 'Didot';
 }
 
 #email {
   width: 198px;
+  background-color: #EDE6D8;
+  font-family: 'Didot';
 }
 
 #event-date {
-  width: 198px;
+  width: 199px;
+  background-color: #EDE6D8;
+  font-family: 'Didot';
+}
+
+#time-range-before {
+  background-color: #EDE6D8;
+  font-family: 'Didot';
+}
+
+#time-range-after {
+  background-color: #EDE6D8;
+  font-family: 'Didot';
 }
 
 #switch-forms-button {
@@ -309,11 +371,12 @@ body {
   margin: auto;
 }
 
-#formpage-header {
+.formpage-p {
   margin: 0 auto;
   width: 80%;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 18px;
 }
 
 /* ---------- VALIDATION ---------- */
@@ -358,6 +421,17 @@ body {
 #time-error {
   text-align: center;
   width: 175px;
+  margin-top: 5px;
+  margin-left: 95px;
+  border: 2px #800000 solid;
+  background-color: #F08080;
+  color: #800000;
+  font-size: 10.5px;
+}
+
+#msg-error {
+  text-align: center;
+  width: 125px;
   margin-top: 5px;
   margin-left: 95px;
   border: 2px #800000 solid;
