@@ -61,12 +61,35 @@ body {
 
 #band-desc {
   text-align: center;
-  padding-top: 30px;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 730px;
+  font-size: 25px;
+}
+
+.home-box {
+  width: 400px;
+  height: 250px;
+  padding: 0 15px 0 15px;
+  border: 2px solid #5C472A;
+  border-radius: 0 3px 3px 0;
+  margin-bottom: 20px;
+}
+
+#thanks {
+  float: left;
+  font-size: 25px;
+  text-align: center;
+}
+
+#news {
+  float: right;
+  padding-top: 0;
 }
 
 .fa {
-    padding: 10px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 50px;
     width: 20px;
     text-align: center;
     text-decoration: none;

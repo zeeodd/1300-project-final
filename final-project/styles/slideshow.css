@@ -1,12 +1,12 @@
 #slide {
-  /*display: block;*/
-  margin: auto 75px;
   width: 930px;
+  margin: auto;
 }
 
 #image_container {
   padding: 12px;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 #current_img {
@@ -15,21 +15,24 @@
 }
 
 .slide_button {
-  border-radius: 20px;
-  color: #5C472A;
-  padding: 15px 30px;
+  border-radius: 0 3px 3px 0;
+  background-color: #BBA788;
+  padding: 16px;
   text-align: center;
   font-size: 20px;
   border-color: #5C472A;
+  position: absolute;
+  top: 70%;
+  color: #EDE6D8;
 }
 
 .slide_button:hover {
-  background-color: #D4C3A7;
+  background-color: #9F8760;
 }
 
 .slide_button:active {
-  color: #D4C3A7;
-  background-color: #5C472A;
+  color: #5C472A;
+  background-color: #9F8760;
 }
 
 .slide_button:focus {
@@ -37,9 +40,9 @@
 }
 
 #left {
-  float: left;
+  left: 135px;
 }
 
 #right {
-  float: right;
+    right: 135px;
 }
