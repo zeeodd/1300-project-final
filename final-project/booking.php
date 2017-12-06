@@ -169,10 +169,7 @@ if (isset($submit)) {
 </head>
 
 <body>
-  <img src="images/scale2.png" alt="Musical Scale" id="scale">
-  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
-  <img src="images/scale2-end.png" alt="Musical Scale End" id="scale-end">
   <h1>Booking</h1>
 
   <div id="all-content-box">

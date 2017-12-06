@@ -18,20 +18,20 @@
 #scale {
   position: fixed;
   z-index: 3;
-  opacity: 0.6;
+  opacity: 1;
   height: auto;
-  width: 330px;
+  width: 25.5%;
   top: 14px;
 }
 
 #scale-end {
   position: fixed;
   z-index: 3;
-  opacity: 0.6;
+  opacity: 1;
   height: auto;
-  width: 308px;
+  width: 24%;
   top: 20px;
-  left: 890px;
+  left: 888px;
 }
 
 ul {
@@ -55,7 +55,7 @@ li {
 
 li a {
     font-weight: normal;
-    padding: 16px 18px;
+    padding: 12px 14px;
     text-decoration: none;
     color: #5C472A;
     text-decoration: underline;
@@ -63,6 +63,76 @@ li a {
 
 li a:hover {
   background-color: #BBA788;
+}
+
+.active {
+  background-image: url("../images/music-note.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/*anything smaller than this width*/
+@media (max-width: 1023px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 0.6;
+    height: auto;
+    width: 22%;
+    top: 27px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 0.6;
+    height: auto;
+    width: 20%;
+    top: 30px;
+    left: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 22%;
+    top: 27px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 20%;
+    top: 30px;
+    left: 818px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 25.5%;
+    top: 14px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 24%;
+    top: 20px;
+    left: 891px;
+  }
 }
 
 /* ---------- Body Styling ----------*/
@@ -198,7 +268,7 @@ body {
 #calendar {
   order: 1;
   background-color: #EDE6D8;
-  border-width: 0;
+  border: 3px solid #5C472A;
 }
 
 #form {
@@ -206,7 +276,7 @@ body {
   width: 330px;
   height: auto;
   padding: 1px;
-  border: 2px solid #5C472A;
+  border: 3px solid #5C472A;
   background-color: #D4C3A7;
   color: #5C472A;
   border-radius: 10px;
@@ -221,7 +291,7 @@ body {
 
 #switch-button {
   background-color: #D4C3A7;
-  border: 2px solid #5C472A;
+  border: 3px solid #5C472A;
   border-radius: 10px;
   outline: none;
   padding: 10px;
@@ -377,6 +447,47 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  #name {
+    width: 98px;
+    background-color: #EDE6D8;
+    font-family: 'Didot';
+  }
+
+  #email {
+    width: 98px;
+    background-color: #EDE6D8;
+    font-family: 'Didot';
+  }
+
+  #event-date {
+    width: 99px;
+    background-color: #EDE6D8;
+    font-family: 'Didot';
+  }
+
+  #range-label {
+    padding-right: 100px;
+  }
+
+  #time-range-before {
+    width: 50px;
+    background-color: #EDE6D8;
+    font-family: 'Didot';
+    margin-left: 68px;
+  }
+
+  #form-label-unique {
+    padding-top: 20px;
+  }
+
+  #time-range-after {
+    width: 50px;
+    background-color: #EDE6D8;
+    font-family: 'Didot';
+  }
 }
 
 /* ---------- VALIDATION ---------- */
