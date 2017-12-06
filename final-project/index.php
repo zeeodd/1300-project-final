@@ -14,16 +14,6 @@
   <?php include("includes/navigation.php"); ?>
   <h1>Home</h1>
 
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.11';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-  <!-- Source: https://developers.facebook.com/docs/plugins/like-button -->
-
   <div id="slide">
 
     <div id="image_container">
@@ -44,8 +34,12 @@
   </p>
 
   <footer>
-    <div class="fb-like" data-href="https://www.facebook.com/OriginalSyncopators/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-    <!-- Source: https://developers.facebook.com/docs/plugins/like-button -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <a href="https://www.facebook.com/OriginalSyncopators/" class="fa fa-facebook"></a>
+    <a href="https://open.spotify.com/album/1vHJ7SnXsBAkbIwj7crJUg" class="fa fa-spotify"></a>
+    <a href="https://theoriginalcornellsyncopators.bandcamp.com/" class="fa fa-bandcamp"></a>
+    <!-- https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
   </footer>
 
   <script src="scripts/slideshow.js" type="text/javascript"></script>

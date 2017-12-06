@@ -64,6 +64,34 @@ body {
   padding-top: 30px;
 }
 
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-spotify {
+  background: #81B71A;
+  color: white;
+}
+
+.fa-bandcamp {
+  background: #629AA9;
+  color: white;
+}
+/*Source: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp*/
+
 /* ---------- Music Page Styling ----------*/
 
 .iframe {
