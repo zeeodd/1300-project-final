@@ -163,6 +163,7 @@ if (isset($submit)) {
   <meta charset="UTF-8">
   <title>Booking</title>
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="styles/form.css" media="all"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/form-scripts.js" type="text/javascript"></script>
