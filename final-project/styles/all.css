@@ -106,14 +106,15 @@ body {
 }
 
 .tile{
-  background-color: #EDE6D8;
+  background-color: #D4C3A7;
   align-self: center;
   height: 40px;
-  width: 100px;
+  width: 110px;
   margin: 14px;
   padding: 5px;
   border: solid;
   border-color: #5C472A;
+  border-radius: 8px;
   font-size: 18px;
   text-align: center;
 
@@ -125,36 +126,74 @@ body {
 }
 
 .profile {
-  width: 200px;
+  width: 225px;
   height: 300px;
-  padding-right: 15px;
+  padding-right: 20px;
+
 }
 
 .instrument{
   width: 200px;
   height: 150px;
   padding-right: 15px;
+  padding-left: 8px;
   align-self: center;
 
 }
 
 .about{
+  background-color: #D4C3A7;
   display: flex;
   flex-direction: row;
   border: solid;
   border-color: #5C472A;
-  background-color: white;
+  border-radius: 5px;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: 22px;
+}
+#rishi_header{
+  padding-top: 65px;
+}
+
+#amit_header{
+  padding-top: 65px;
+}
+
+#nikki_header{
+  padding-top: 65px;
+}
+
+#colin_header{
+  padding-top: 65px;
+}
+
+#troy_header{
+  padding-top: 65px;
+}
+
+#robbert_header{
+  padding-top: 65px;
 }
 
 #noah {
-  width: 200px;
-  height: 250px;
+  width: 225px;
+  height: 300px;
 }
 
 .blurb {
   position: relative;
+}
+
+.paragraph {
+  width: 775px;
+}
+
+#c-sax {
+  width: 240px;
+  height: 180px;
+  padding-right: 15px;
+  padding-left: 8px;
+  align-self: center;
 }
 
 /* ---------- Booking Page Styling ----------*/
