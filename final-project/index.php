@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
   <h1>Home</h1>
 

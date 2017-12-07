@@ -15,6 +15,25 @@
   z-index: 2;
 }
 
+#scale {
+  position: fixed;
+  z-index: 3;
+  opacity: 1;
+  height: auto;
+  width: 25.5%;
+  top: 14px;
+}
+
+#scale-end {
+  position: fixed;
+  z-index: 3;
+  opacity: 1;
+  height: auto;
+  width: 24%;
+  top: 20px;
+  left: 888px;
+}
+
 ul {
   /* Nav bar inspired by: https://www.w3schools.com/css/css_navbar.asp */
   text-align: center;
@@ -25,6 +44,7 @@ ul {
   overflow: hidden;
   top: 50px;
   width: 85%;
+  height: 25px;
   z-index: 2;
 }
 
@@ -35,14 +55,86 @@ li {
 
 li a {
     font-weight: normal;
-    padding: 16px 18px;
+    padding: 12px 14px;
     text-decoration: none;
     color: #5C472A;
     text-decoration: underline;
+    transition: .35s ease-in-out;
 }
 
 li a:hover {
   background-color: #BBA788;
+  transition: .35s ease-in-out;
+}
+
+.active {
+  background-image: url("../images/music-note.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+/*anything smaller than this width*/
+@media (max-width: 1023px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 0.6;
+    height: auto;
+    width: 22%;
+    top: 27px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 0.6;
+    height: auto;
+    width: 20%;
+    top: 30px;
+    left: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 22%;
+    top: 27px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 20%;
+    top: 30px;
+    left: 818px;
+  }
+}
+
+@media (min-width: 1280px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 25.5%;
+    top: 14px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 24%;
+    top: 20px;
+    left: 891px;
+  }
 }
 
 /* ---------- Body Styling ----------*/
@@ -55,6 +147,7 @@ body {
   padding-bottom: 20px;
   padding-top: 80px;
   background-color: #EDE6D8;
+  /*background-image: url("../images/recording-studio.png");*/
 }
 
 /* ---------- Home Page Styling ----------*/
@@ -177,19 +270,7 @@ body {
 #calendar {
   order: 1;
   background-color: #EDE6D8;
-  border-width: 0;
-}
-
-#form {
-  margin: 0 auto;
-  width: 330px;
-  height: auto;
-  padding: 1px;
-  border: 2px solid #000000;
-  background-color: #D4C3A7;
-  color: #5C472A;
-  border-radius: 10px;
-  order: 2;
+  border: 3px solid #5C472A;
 }
 
 #switch-button-div {
@@ -200,168 +281,16 @@ body {
 
 #switch-button {
   background-color: #D4C3A7;
-  border: 2px solid #000000;
+  border: 3px solid #5C472A;
   border-radius: 10px;
   outline: none;
+  padding: 10px;
+  font-size: 18px;
+  color: #5C472A;
+  font-family: 'Didot';
 }
 
 #switch-button:active {
-  background-color: grey;
-}
-
-#form-header {
-  text-align: center;
-}
-
-.form-label {
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-#date-label {
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-#range-label {
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-#email-label {
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  padding-top: 20px;
-}
-
-#form-label-unique {
-  display: inline-block;
-  width: 90px;
-  text-align: center;
-  padding-top: 50px;
-}
-
-#notes {
-  align-self: center;
-  height: 55px;
-  width: 198px;
-  resize: none;
-}
-
-.submit-button {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-#name {
-  width: 198px;
-}
-
-#email {
-  width: 198px;
-}
-
-#event-date {
-  width: 198px;
-}
-
-#switch-forms-button {
-  text-align: center;
-}
-
-#required-field {
-  font-size: 11px;
-  padding-left: 85px;
-  padding-bottom: 10px;
-}
-
-#form-table, .th, .td {
-  border: 3px solid #5C472A;
-  border-collapse: collapse;
-}
-
-.th {
-  background-color: #9F8760;
-  color: #EDE6D8;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 5px;
-}
-
-.td {
-  background-color: #D4C3A7;
-  color: #5C472A;
-  padding: 5px;
-  text-align: center;
-  font-size: 13px;
-}
-
-#form-table {
-  width: 80%;
-  margin: auto;
-}
-
-#formpage-header {
-  margin: 0 auto;
-  width: 80%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-/* ---------- VALIDATION ---------- */
-
-.error-hidden {
-  display: none;
-}
-
-#name-error {
-  text-align: center;
-  width: 130px;
-  margin-top: 5px;
-  margin-left: 95px;
-  border: 2px #800000 solid;
-  background-color: #F08080;
-  color: #800000;
-  font-size: 10.5px;
-}
-
-#email-error {
-  text-align: center;
-  width: 130px;
-  margin-top: 5px;
-  margin-left: 95px;
-  border: 2px #800000 solid;
-  background-color: #F08080;
-  color: #800000;
-  font-size: 10.5px;
-}
-
-#date-error {
-  text-align: center;
-  width: 100px;
-  margin-top: 5px;
-  margin-left: 95px;
-  border: 2px #800000 solid;
-  background-color: #F08080;
-  color: #800000;
-  font-size: 10.5px;
-}
-
-#time-error {
-  text-align: center;
-  width: 175px;
-  margin-top: 5px;
-  margin-left: 95px;
-  border: 2px #800000 solid;
-  background-color: #F08080;
-  color: #800000;
-  font-size: 10.5px;
+  background-color: #5C472A;
+  color: #D4C3A7;
 }

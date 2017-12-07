@@ -1,9 +1,9 @@
 <?php
 
-$state = $_REQUEST["state"];
+$page_state = $_REQUEST["state"];
 $submit = $_REQUEST["submit"];
 
-if($state == 0) { // Book Us State
+if($page_state == 0) { // Book Us State
   date_default_timezone_set("America/New_York");
   $name = $_REQUEST["user-name"];
   $email = $_REQUEST["user-email"];
@@ -16,20 +16,22 @@ if($state == 0) { // Book Us State
   $email_valid = true;
   $date_valid = true;
   $time_valid = true;
+  $note_valid = true;
 }
 
-if($state == 1) { // Contact Us State
+if($page_state == 1) { // Contact Us State
   $name = $_REQUEST["user-name"];
   $email = $_REQUEST["user-email"];
   $note = $_REQUEST["user-notes"];
 
   $name_valid = true;
   $email_valid = true;
+  $note_valid = true;
 }
 
 if (isset($submit)) {
 
-  if($state == 0) { // Book Us State
+  if($page_state == 0 || $page_state == "") { // Book Us State
     // NAME VALIDATION
     $name_nonempty = !empty($name);
     $name_onlylets = preg_match("/^[a-zA-Z ]*$/",$name);
@@ -80,7 +82,7 @@ if (isset($submit)) {
       $_SESSION['time-before'] = $timeBefore;
       $_SESSION['time-after'] = $timeAfter;
       $_SESSION['note'] = $note;
-      $_SESSION['state'] = $state;
+      $_SESSION['state'] = $page_state;
       header("Location: formpage.php");
       return;
     } else {
@@ -99,7 +101,8 @@ if (isset($submit)) {
     }
   }
 
-  if ($state == 1) { // Contact Us State
+  if ($page_state == 1) { // Contact Us State
+
     // NAME VALIDATION
     $name_nonempty = !empty($name);
     $name_onlylets = preg_match("/^[a-zA-Z ]*$/",$name);
@@ -110,20 +113,43 @@ if (isset($submit)) {
     $email_format = filter_var($email, FILTER_VALIDATE_EMAIL);
     $email_valid = $email_nonempty && $email_format;
 
-    if ($name_valid && $email_valid) {
+    // MESSAGE VALIDATION
+    $note_valid = !empty($note);
+
+    if ($name_valid && $email_valid && $note_valid) {
       session_start();
       $_SESSION['name'] = $name;
       $_SESSION['email'] = $email;
       $_SESSION['note'] = $note;
-      $_SESSION['state'] = $state;
+      $_SESSION['state'] = $page_state;
       header("Location: formpage.php");
       return;
     } else {
+      echo '<style type="text/css">
+            #date-div {
+              display: none;
+            }
+            #date-error {
+              display: none;
+            }
+            #time-div {
+              display: none;
+            }
+            #time-error {
+              display: none;
+            }
+            </style>';
       if (!$name_valid) {
         $name_valid = false;
+        $page_state = 1;
       }
       if (!$email_valid) {
         $email_valid = false;
+        $page_state = 1;
+      }
+      if (!$note_valid) {
+        $note_valid = false;
+        $page_state = 1;
       }
     }
   }
@@ -137,13 +163,13 @@ if (isset($submit)) {
   <meta charset="UTF-8">
   <title>Booking</title>
   <link rel="stylesheet" type="text/css" href="styles/all.css" media="all"/>
+  <link rel="stylesheet" type="text/css" href="styles/form.css" media="all"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/form-scripts.js" type="text/javascript"></script>
 </head>
 
 <body>
-  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
   <h1>Booking</h1>
 
@@ -157,13 +183,13 @@ if (isset($submit)) {
     <!-- FORM CODE -->
     <form id="form" action="booking.php" method="post" novalidate>
 
-      <h2 id="form-header">Book Us!</h2>
-      <input type="text" id="state" name="state" value="0">
+      <h2 id="form-header"><?php if ($page_state==0) { echo("Book Us!"); } else { echo("Contact Us!"); } ?></h2>
+      <input type="text" id="state" name="state" value="<?php echo($page_state); ?>">
 
       <!-- NAME -->
       <div id="name-box">
         <label class="form-label">Name*:</label>
-        <input type="text" id="name" name="user-name" value="<?php echo( htmlspecialchars($name) );?>" required pattern="[A-Za-z\s]{1,}$">
+        <input type="text" id="name" placeholder="Louis Armstrong" name="user-name" value="<?php echo( htmlspecialchars($name) );?>" required pattern="[A-Za-z\s]{1,}$">
       </div>
       <div class="<?php if ($name_valid) { echo("error-hidden"); } ?>" id="name-error">
         Invalid or no name provided.
@@ -172,7 +198,7 @@ if (isset($submit)) {
       <!-- EMAIL -->
       <div>
         <label id="email-label">E-mail*:</label>
-        <input type="email" id="email" name="user-email" value="<?php echo( htmlspecialchars($email) );?>" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
+        <input type="email" id="email" placeholder="saxaphone123@jazz.edu" name="user-email" value="<?php echo( htmlspecialchars($email) );?>" required pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$">
       </div>
       <div class="<?php if ($email_valid) { echo("error-hidden"); } ?>" id="email-error">
         Invalid or no email provided.
@@ -201,11 +227,14 @@ if (isset($submit)) {
       <!-- EVENT DESCRIPTION -->
       <div id="event-desc">
         <label id="form-label-unique">Event Details:</label>
-        <textarea id="notes" name="user-notes" placeholder="Let us know more about the event!"><?php echo( htmlspecialchars($note) );?></textarea>
+        <textarea id="notes" required name="user-notes" placeholder="Let us know more about the event!"><?php echo( htmlspecialchars($note) );?></textarea>
+      </div>
+      <div class="<?php if ($note_valid) { echo("error-hidden"); } ?>" id="msg-error">
+        Please provide a message.
       </div>
 
       <div class="submit-button">
-        <button name="submit" type="submit">Submit</button>
+        <button id='submit' name="submit" type="submit">Submit</button>
       </div>
 
       <!-- REQUIRED MESSAGE -->
@@ -217,7 +246,7 @@ if (isset($submit)) {
 
     <!-- SUBMIT BUTTON -->
     <div id="switch-button-div">
-      <button id="switch-button">Switch to "Contact Us" form</button>
+      <button id="switch-button"><?php if ($page_state==0) { echo("Contact Us!"); } else { echo("Book Us!"); } ?></button>
     </div>
 
   </div>

@@ -8,7 +8,6 @@
 </head>
 
 <body id="about_page">
-  <h1><a id="navTitle" href="index.php">Original Cornell Syncopators</a></h1>
   <?php include("includes/navigation.php"); ?>
   <h1>About Us</h1>
 
