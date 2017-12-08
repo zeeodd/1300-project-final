@@ -32,8 +32,9 @@
 
   <div class="footer">
     <section class="home-box" id= "thanks">
+      <h2 id="welcome">Welcome!</h2>
       <p>Thanks for visiting our site. Listen to our newest release, read our bios, or book us for your upcoming event!</p>
-      <p>Also, feel free to check us out social media!</p>
+      <p id="p">Also, feel free to check us out on our social media below!</p>
     </section>
 
     <section class="home-box" id="news">
@@ -52,7 +53,7 @@
       <a href="https://open.spotify.com/album/1vHJ7SnXsBAkbIwj7crJUg" class="fa fa-spotify"></a>
       <a href="https://theoriginalcornellsyncopators.bandcamp.com/" class="fa fa-bandcamp"></a>
       <!-- https://www.w3schools.com/howto/howto_css_social_media_buttons.asp -->
-    </secion>
+    </section>
   </div>
 
   <script src="scripts/slideshow.js" type="text/javascript"></script>

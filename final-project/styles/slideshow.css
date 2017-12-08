@@ -47,3 +47,22 @@
 #right {
     right: 135px;
 }
+
+@media (max-width: 1024px) {
+  #current_img {
+    width: 800px;
+  }
+
+  #left {
+    left: 120px;
+  }
+
+  #right {
+    right: 13px;
+  }
+
+  .slide_button {
+    position: absolute;
+    top: 130%;
+  }
+}

@@ -205,7 +205,7 @@
 
 #name-error {
   text-align: center;
-  width: 130px;
+  width: 142px;
   margin-top: 5px;
   margin-left: 95px;
   border: 2px #800000 solid;
@@ -216,7 +216,7 @@
 
 #email-error {
   text-align: center;
-  width: 130px;
+  width: 142px;
   margin-top: 5px;
   margin-left: 95px;
   border: 2px #800000 solid;
@@ -227,7 +227,7 @@
 
 #date-error {
   text-align: center;
-  width: 100px;
+  width: 142px;
   margin-top: 5px;
   margin-left: 95px;
   border: 2px #800000 solid;
@@ -238,7 +238,7 @@
 
 #time-error {
   text-align: center;
-  width: 175px;
+  width: 195px;
   margin-top: 5px;
   margin-left: 95px;
   border: 2px #800000 solid;

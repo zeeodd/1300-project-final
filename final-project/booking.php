@@ -176,8 +176,8 @@ if (isset($submit)) {
   <div id="all-content-box">
 
     <!-- CALENDAR -->
-    <div id="calendar">
-      <iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=evergreenskier%40gmail.com&amp;color=%234E5D6C&amp;ctz=America%2FNew_York" style="border-width:0" width="600" height="400"></iframe>
+    <div id="calendar-div">
+      <iframe id="cal" src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=evergreenskier%40gmail.com&amp;color=%234E5D6C&amp;ctz=America%2FNew_York"></iframe>
     </div>
 
     <!-- FORM CODE -->

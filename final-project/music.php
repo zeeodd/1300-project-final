@@ -12,25 +12,29 @@
   <?php include("includes/navigation.php"); ?>
   <h1>Our Releases</h1>
 
-  <div id="releases">
-    <div id="album_play">
-      <iframe id="spotify" src="https://open.spotify.com/embed/album/1vHJ7SnXsBAkbIwj7crJUg" width="300"
-      height="380" frameborder="0" allowtransparency="true"></iframe>
-    </div>
+  <div id="music_container">
 
-    <div id="album">
-      <img src="images/album_cover.jpg" alt="album_cover" id="albumcover">
-    </div>
+    <div id="releases">
 
+      <div id="album_play">
+        <iframe id="spotify" src="https://open.spotify.com/embed/album/1vHJ7SnXsBAkbIwj7crJUg"></iframe>
+      </div>
+
+      <div id="album">
+        <img src="images/album_cover.jpg" alt="album_cover" id="albumcover">
+      </div>
+
+    </div>
     <div id="album_des">
-      <p> Check out our album "Wild Jazz", which was released on November 26th, 2017.
-        "Wild Jazz" is out on Spotify, Bandcamp and will soon be on Itunes as well.
-        Thanks to Electric Buffalo Records for the fantastic production! </p>
+      <p> Check out our debut album "Wild Jazz" above! </p>
+      <p> Our debut album was released on November 26th, 2017. </p>
+      <p>  "Wild Jazz" is out on Spotify, Bandcamp and will soon be on Itunes
+        as well. </p>
+      <p> We'd like to thank Electric Buffalo Records for the fantastic production! </p>
     </div>
   </div>
 
   <h1>Our Videos</h1>
-  <p> from oldest to new </p>
   <div id="our_vids">
 
     <div>

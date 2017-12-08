@@ -14,33 +14,22 @@
 
   <section id="tiles">
 
-    <div class="tile">
-      <a href="#noah_header"> Noah Li </a>
-    </div>
+    <a class="button" href="#about_page"><div class="tile"> Noah Li </div></a>
 
-    <div class="tile">
-      <a href="#rishi_header"> Rishi Verma </a>
-    </div>
+    <a class="button" href="#rishi_header"><div class="tile"> Rishi Verma </div></a>
 
-    <div class="tile">
-      <a href="#amit_header"> Amit Mizrahi </a>
-    </div>
+    <a class="button" href="#amit_header"><div class="tile"> Amit Mizrahi </div></a>
 
-    <div class="tile">
-      <a href="#nikki_header"> Nikki Love </a>
-    </div>
+    <a class="button" href="#nikki_header"><div class="tile"> Nikki Love </div></a>
 
-    <div class="tile">
-      <a href="#colin_header"> Colin Hancock </a>
-    </div>
+    <a class="button" href="#colin_header"><div class="tile"> Colin Hancock </div></a>
 
-    <div class="tile">
-      <a href="#troy_header"> Troy Anderson </a>
-    </div>
+    <a class="button" href="#troy_header"><div class="tile"> Troy Anderson </div></a>
 
-    <div class="tile">
-      <a href="#robbert_header"> Robbert Van Renesse </a>
-    </div>
+    <a class="button" href="#robbert_header"><div class="tile"> Robbert Van Renesse </div></a>
+
+    <a class="button" href="#hannah_header"><div class="tile"> Hannah Krall </div></a>
+
   </section>
 
   <section id="noah_header">
@@ -59,7 +48,7 @@
     <h2>Rishi Verma</h2>
     <div class="about">
       <img src="images/trombone.jpg" alt="Rishi Verma playing" class="profile" id="rishi">
-      <p class= "paragraph">Rishi Verma is some dude. Lorem ipsum dolor sit amet, consectetur adipisicing elit. He plays the trombone.</p>
+      <p class= "paragraph">Born in Ithaca, NY, Rishi Verma started playing trombone in 3rd grade, and first joined a jazz band one year later. He has continued playing jazz ever since. At Cornell Kieran is studying Physics, but still loves to participate in both the Syncopators and the Jazz Band..</p>
       <img src="images/c-trombone.png" alt="Rishi's instrument" class="instrument" id="c-trombone">
       <!--Source: https://www.123rf.com/photo_54963817_stock-illustration-2d-cartoon-illustration-of-bass-trombone.html-->
     </div>
@@ -83,9 +72,9 @@
     <h2>Nikki Love</h2>
     <div class="about">
       <img src="images/violin.jpg" alt="Nikki Love playing" class="profile" id="nikki">
-      <p class= "paragraph"> Nikki loveLorem ipsum dolor sit amet, consectetur adipisicing elit. She plays the violin.</p>
+      <p class= "paragraph"> Nikki Love is a sophomore undergraduate from Foster City, CA, studying Engineering Physics. She has been playing both jazz and classical violin for almost ten years now, and also plays in Cornell's Jazz Band and Symphony Orchestra. She has been singing ever since she could speak and used to sing and act in musicals many many years ago... She plans to minor in music and has no idea what she's gonna do with a physics degree</p>
       <img src="images/c-violin.png" alt="Nikki's instrument" class="instrument">
-            <!--Source: http://www.clker.com/clipart-violin.html -->
+      <!--Source: http://www.clker.com/clipart-violin.html -->
     </div>
   </section>
 
@@ -118,10 +107,22 @@
   <section>
     <h2>Robbert Van Renesse</h2>
     <div class="about">
-      <img src="images/banjo.jpg" alt="Robbert Van Renesse playing" class="profile" id="troy">
+      <img src="images/banjo.jpg" alt="Robbert Van Renesse playing" class="profile" id="robbert">
       <p class= "paragraph">Robbert van Renesse lives in Ithaca, NY and loves playing early jazz on tenor and plectrum banjo as well as uke and guitar.  Besides the Original Cornell Syncopators, Robbert plays with the Ithaca-based Ageless Jazz Band and the Cortland-based JazzHappensBand.</p>
       <img src="images/c-banjo.png" alt="Robbert's instrument" class="instrument" id="c-banjo">
       <!--Source: https://www.clker.com/clipart-12745.html-->
+    </div>
+  </section>
+
+  <div id="hannah_header">
+  </div>
+  <section>
+    <h2>Hannah Krall</h2>
+    <div class="about">
+      <img src="images/woman_sax.jpg" alt="Hannah Krall playing" class="profile" id="hannah">
+      <p class= "paragraph">Hannah Krall is a senior music major from West Lawn, PA, with a focus in musicology. She enjoys studying jazz and early music. Her love for music began in third grade when she learned to play the saxophone. Subsequently, she learned how to play the clarinet and viola da gamba. Hannah is currently applying to graduate programs in musicology.</p>
+      <img src="images/c-sax.png" alt="Hannah's instrument" class="instrument" id="c-woman-sax">
+      <!--Source: https://www.zazzle.com/saxophone+cartoon+postcards-->
     </div>
   </section>
 

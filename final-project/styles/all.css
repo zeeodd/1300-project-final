@@ -112,7 +112,11 @@ li a:hover {
     height: auto;
     width: 20%;
     top: 30px;
-    left: 818px;
+    left: 768px;
+  }
+
+  #current_img {
+    width: 800px;
   }
 }
 
@@ -137,13 +141,34 @@ li a:hover {
   }
 }
 
+@media (min-width: 1440px) {
+  #scale {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 25.5%;
+    top: 14px;
+  }
+
+  #scale-end {
+    position: fixed;
+    z-index: 3;
+    opacity: 1;
+    height: auto;
+    width: 24%;
+    top: 20px;
+    left: 991px;
+  }
+}
+
 /* ---------- Body Styling ----------*/
 
 body {
   margin: 0 auto;
   padding: 100px;
   color: #5C472A;
-  font-family: "Times", sans-serif;
+  font-family: "Didot";
   padding-bottom: 20px;
   padding-top: 80px;
   background-color: #EDE6D8;
@@ -152,12 +177,17 @@ body {
 
 /* ---------- Home Page Styling ----------*/
 
+#welcome {
+  font-size: 22px;
+  text-align: left;
+}
+
 #band-desc {
   text-align: center;
   margin: auto;
   margin-bottom: 10px;
   width: 730px;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .home-box {
@@ -167,11 +197,16 @@ body {
   border: 3px solid #5C472A;
   border-radius: 10px;
   margin-bottom: 20px;
+  background-color: #D4C3A7;
+}
+
+#p {
+  padding-top: 5px;
 }
 
 #thanks {
-  font-size: 25px;
-  text-align: center;
+  font-size: 20px;
+  text-align: left;
   order: 0;
   margin-right: 15px;
 }
@@ -185,6 +220,7 @@ body {
   padding-top: 0;
   order: 1;
   margin-left: 15px;
+  font-size: 15px;
 }
 
 .fa {
@@ -230,24 +266,52 @@ body {
 #releases{
   display: inline-block;
   column-count: 2;
-  /*column-gap: 20px;*/
-
+  column-gap: 0;
+  width:97%;
 }
+
+#music_container{
+  display: inline-block;
+}
+
 #albumcover{
   float: left;
-  width: 75%;
+  width: 500px;
+  height: 500px;
+  border: solid;
+  border-radius: 10px;
+  border-width: 3px;
+  padding: 10px;
+  background-color: #D4C3A7;
+  margin-left: 30px;
 }
 
 #album_play{
   float:left;
-  margin-right: 100px;
 }
+
+#spotify {
+  width: 500px;
+  height: 500px;
+  border: solid;
+  border-radius: 10px;
+  border-width: 3px;
+  padding: 10px;
+  background-color: #D4C3A7;
+}
+
 #album_des {
-  float:left;
-  font-size: 15px;
+  font-size: 20px;
   text-align: center;
-  padding-right: 100px;
-  width: 400px;
+  width: 1030px;
+  display: inline-block;
+  border: solid;
+  background-color: #D4C3A7;
+  border-radius: 10px;
+  border-width: 3px;
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-bottom: 20px;
 }
 
 #our_vids {
@@ -255,6 +319,7 @@ body {
   max-width: 100%;
 }
 /* ---------- About Page Styling ----------*/
+
 
 #tiles{
   display: flex;
@@ -274,19 +339,24 @@ body {
   border-radius: 8px;
   font-size: 18px;
   text-align: center;
-
 }
-.tile a {
-  color: black;
+.button {
   text-decoration: none;
+  color: black;
   vertical-align: middle;
+  width: 133px;
+}
+
+.tile:hover {
+  background-color: #5C472A;
+  color: #D4C3A7;
+  /*border-color: #D4C3A7;*/
 }
 
 .profile {
   width: 225px;
   height: 300px;
   padding-right: 20px;
-
 }
 
 .instrument{
@@ -295,7 +365,6 @@ body {
   padding-right: 15px;
   padding-left: 8px;
   align-self: center;
-
 }
 
 .about{
@@ -308,28 +377,33 @@ body {
   justify-content: space-between;
   font-size: 21px;
 }
+
 #rishi_header{
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 #amit_header{
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 #nikki_header{
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 #colin_header{
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 #troy_header{
-  padding-top: 65px;
+  padding-top: 75px;
 }
 
 #robbert_header{
-  padding-top: 65px;
+  padding-top: 75px;
+}
+
+#hannah_header{
+  padding-top: 75px;
 }
 
 #noah {
@@ -343,14 +417,6 @@ body {
 
 .paragraph {
   width: 775px;
-}
-
-#c-sax {
-  width: 240px;
-  height: 180px;
-  padding-right: 15px;
-  padding-left: 8px;
-  align-self: center;
 }
 
 /* ---------- Booking Page Styling ----------*/
@@ -370,10 +436,18 @@ body {
   border: 0px;
 }
 
-#calendar {
+#calendar-div {
   order: 1;
   background-color: #EDE6D8;
   border: 3px solid #5C472A;
+  width: 600px;
+  height: 400px;
+}
+
+#cal {
+  width: 600px;
+  height: 400px;
+  border: none;
 }
 
 #switch-button-div {
